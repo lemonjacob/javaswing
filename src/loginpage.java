@@ -5,7 +5,6 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
-import java.util.concurrent.TimeUnit;
 
 public class loginpage {
     private JTextField usernameTextField;
@@ -14,11 +13,11 @@ public class loginpage {
     private JButton loginButton;
     private JPanel login;
     private JLabel Title;
-    private JLabel passwordlabel;
+    private JLabel passwordLabel;
     private JButton createAccountButton;
     private MessageDigest digest;
     private final Dictionary pass = new Hashtable();
-    private static boolean logedin = false;
+    private static boolean loggedIn = false;
 
     public loginpage() {
         loginButton.addActionListener(new ActionListener() {
@@ -40,7 +39,7 @@ public class loginpage {
                         passwordField1.setText(null);
                         usernameTextField.setText(null);
                         uname=username;
-                        logedin=true;
+                        loggedIn =true;
                         try {
                             Thread.sleep(500);
                         } catch (InterruptedException ex) {
@@ -83,7 +82,7 @@ public class loginpage {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
-        while (!logedin) {
+        while (!loggedIn) {
             try {
                 Thread.sleep(500);
             } catch (InterruptedException e) {

@@ -6,7 +6,9 @@
       <xy x="20" y="20" width="500" height="400"/>
     </constraints>
     <properties/>
-    <border type="none"/>
+    <border type="none">
+      <title-color color="-2104859"/>
+    </border>
     <children>
       <component id="b9c4" class="javax.swing.JButton" binding="button1" default-binding="true">
         <constraints>
