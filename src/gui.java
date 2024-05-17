@@ -12,6 +12,7 @@ public class gui {
     private JPasswordField fahrenheitPasswordField;
     private JTextField fahrenheitTextField;
     private boolean cellast;
+    private String username;
 
     public gui() {
         button1.addActionListener(new ActionListener() {
@@ -36,7 +37,7 @@ public class gui {
         });
     }
     public static void main(String Username){
-        JFrame frame = new JFrame("gui");
+        JFrame frame = new JFrame("Welcome"+ Username);
         frame.setContentPane(new gui().panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
