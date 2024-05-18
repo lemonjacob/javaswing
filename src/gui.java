@@ -11,8 +11,6 @@ public class gui {
     private JLabel fahrenheitLabel;
     private JPasswordField fahrenheitPasswordField;
     private JTextField fahrenheitTextField;
-    private boolean cellast;
-    private String username;
 
     public gui() {
         button1.addActionListener(new ActionListener() {
@@ -25,18 +23,16 @@ public class gui {
             @Override
             public void keyTyped(KeyEvent e) {
                 super.keyTyped(e);
-                cellast=true;
             }
         });
         fahrenheitTextField.addKeyListener(new KeyAdapter() {
             @Override
             public void keyTyped(KeyEvent e) {
                 super.keyTyped(e);
-                cellast=false;
             }
         });
     }
-    public static void main(String Username){
+    public static void run(String Username){
         JFrame frame = new JFrame("Welcome"+ Username);
         frame.setContentPane(new gui().panel1);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
